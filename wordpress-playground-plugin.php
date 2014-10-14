@@ -29,7 +29,7 @@ function create_issues(){
 		'description' => 'Use to create and manage journal issues',
 		'public' => true,
 		'menu_position'=> 5,
-		'supports' => array('title','editor','thumbnail','excerpt','comments'),
+		'supports' => array('title','editor','thumbnail','excerpt'),
 		'has_archive' => true
 	);
 	register_post_type('issue',$args);
@@ -96,7 +96,7 @@ function issue_taxonomies(){
 	);
 	$args=array(
 		'labels'=>$labels,
-		'hierarchical'=>true
+		'hierarchical'=>false
 		);
 
 	register_taxonomy('Themes','issue', $args);
